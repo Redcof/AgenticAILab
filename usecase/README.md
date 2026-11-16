@@ -27,7 +27,7 @@ Windows PowerShell: use `py -3 -m venv .venv`, `.venv\Scripts\Activate.ps1`, the
 | Lab chapter | Script | What to observe |
 |---|---|---|
 | Foundations | [01_foundations.py](01_foundations.py) | Latest effective policy wins; no evidence → abstain |
-| Chunking | [02_chunking.py](02_chunking.py) | Overlap rescues a fact split at a chunk boundary |
+| Chunking | [02_chunking.py](02_chunking.py) | Three-word overlap rescues a fact split at a chunk boundary |
 | Vector Search | [03_vector_search.py](03_vector_search.py) | Exact cosine ranking and tenant pre-filter |
 | Evaluation / RAG Evaluation Lab | [04_evaluation.py](04_evaluation.py) | Precision@k, recall@k, F1, reciprocal rank |
 | Agentic AI | [05_agent_authorization.py](05_agent_authorization.py) | Untrusted refund requests are denied; approved scoped action succeeds once |
