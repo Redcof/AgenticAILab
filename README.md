@@ -151,6 +151,22 @@ AgenticAILab/
 5. **Honest scope**: no API keys, LLM calls, embeddings, or Rust build toolchain in Stage 1.
 6. **Portable setup**: standard Python packaging and minimal dependencies keep this stage easy to run and debug.
 
+## Reproducible worked examples
+
+The [`usecase/` directory](usecase/README.md) contains six standalone Python scripts that demonstrate RAG concepts with sample data, outputs and tests. They require only Python 3.11+ and no API keys. Run all six from the repository root and check their tests:
+
+```bash
+python3 usecase/01_foundations.py
+python3 usecase/02_chunking.py
+python3 usecase/03_vector_search.py
+python3 usecase/04_evaluation.py
+python3 usecase/05_agent_authorization.py
+python3 usecase/06_grounded_citations.py
+python3 -m unittest discover -s usecase -p 'test_*.py' -v
+```
+
+See [full use-case setup and reproduction instructions](usecase/README.md). Related links also appear beside the worked examples in the [portfolio RAG Lab](https://redcof.github.io/study/rag/).
+
 ## Progressive curriculum
 
 | Stage | Subject | Implementation |
