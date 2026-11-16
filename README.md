@@ -58,6 +58,25 @@ python -m ruff check .
 
 Expected: **10 tests pass**, with no Ruff errors. This covers tenant filtering, ranking, deterministic behavior, invalid inputs, and duplicate document IDs.
 
+### Offline fallback (no package installation)
+
+If your machine cannot download dependencies, you can run the standard-library-only demo directly from the repository root without installing anything:
+
+**macOS / Linux:**
+
+```bash
+PYTHONPATH=src python3 -m ragforge.cli "RAG retrieval"
+```
+
+**Windows PowerShell:**
+
+```powershell
+$env:PYTHONPATH = "src"
+py -3 -m ragforge.cli "RAG retrieval"
+```
+
+Unit tests still require `pytest`; the normal editable installation is recommended when you have internet access.
+
 ## Step 5 — Run the app
 
 ```bash
