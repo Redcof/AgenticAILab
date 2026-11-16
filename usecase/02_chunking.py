@@ -11,7 +11,7 @@ python3 usecase/02_chunking.py
 
 ## Expected
 With size=5 and overlap=0, the phrase "refund within 30 days" is split.
-With overlap=2, a chunk contains the entire phrase.
+With overlap=3, a chunk contains the entire phrase.
 
 ## Limits
 This is word-based, not tokenizer-aware. Production chunkers must preserve
@@ -31,7 +31,7 @@ def chunk_words(text: str, size: int, overlap: int) -> list[str]:
 def main() -> None:
     text = "Our annual plan offers a refund within 30 days after purchase"
     phrase = "refund within 30 days"
-    for overlap in (0, 2):
+    for overlap in (0, 3):
         chunks = chunk_words(text, size=5, overlap=overlap)
         print(f"overlap={overlap}: {chunks}")
         print(f"complete evidence present: {any(phrase in c for c in chunks)}")
