@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling>=1.25,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ragforge"
+version = "0.1.0"
+description = "Testable tenant-scoped lexical retrieval baseline for Agentic AI Lab"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "ruff>=0.9,<1"]
+
+[project.scripts]
+ragforge = "ragforge.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ragforge"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]
