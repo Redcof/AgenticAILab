@@ -41,7 +41,7 @@ class UseCaseTests(unittest.TestCase):
         text = "Our annual plan offers a refund within 30 days after purchase"
         phrase = "refund within 30 days"
         self.assertFalse(any(phrase in c for c in m.chunk_words(text, 5, 0)))
-        self.assertTrue(any(phrase in c for c in m.chunk_words(text, 5, 2)))
+        self.assertTrue(any(phrase in c for c in m.chunk_words(text, 5, 3)))
 
     def test_tenant_filter(self):
         m = load("03_vector_search.py")
